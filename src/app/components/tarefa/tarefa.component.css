@@ -1,0 +1,38 @@
+.tarefa{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.tarefa .botao{
+    flex-basis: 40px;
+    background-color: transparent;
+    color: #999;
+    width: 40px;
+    height: 40px;
+    border: none;
+    line-height: 40px;
+}
+.tarefa .botao:hover{
+    color: #666;
+}
+
+.tarefa .texto{
+    flex-basis: calc(100% - 40px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+
+.tarefa.concluida{
+    background-color: #f6f6f6;
+    color: #999;
+    text-decoration: line-through;
+}

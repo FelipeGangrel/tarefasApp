@@ -1,0 +1,9 @@
+<div class="tarefa" [ngClass]="tarefa.status">
+
+  <div class="texto"  (click)="concluir(tarefa)">
+     {{tarefa.titulo}}
+  </div>
+
+  <button class="botao" (click)="excluir(tarefa)"><i class="fa fa-close"></i></button>
+
+</div>

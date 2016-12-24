@@ -1,0 +1,14 @@
+<form #f="ngForm" (ngSubmit)="criarTarefa(f)">
+  <div class="campo">
+    <input type="text" placeholder="Nova tarefa" name="titulo" ngModel required #titulo="ngModel">
+  </div>
+  <div class="botao">
+    <button type="submit"><i class="fa fa-paper-plane"></i></button>
+  </div>
+</form>
+
+<!--{{tarefas | json}}-->
+<div class="tarefas">
+  <app-tarefa *ngFor="let tarefa of tarefas" [tarefa]="tarefa" (onExcluir)="excluir($event)" (onConcluir)="concluir($event)" >
+  </app-tarefa>
+</div>
